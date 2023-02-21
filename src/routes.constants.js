@@ -1,0 +1,5 @@
+export const API_BASE_URL = 'http://localhost:5050'
+export const API_DEPARTMENTS_URL = API_BASE_URL + '/departments'
+export const API_USERS_URL = API_BASE_URL + '/users'
+export const API_ACTIVITIES_URL = API_BASE_URL + '/activities'
+export const API_EMPLOYEES_URL = API_BASE_URL + '/employees'
