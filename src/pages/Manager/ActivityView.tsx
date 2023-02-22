@@ -28,6 +28,7 @@ function ManagerActivityView() {
   useEffect(() => {
       fetchEmployeeList();
       fetchActivityList();
+      // eslint-disable-next-line react-hooks/exhaustive-deps 
   }, []);
 
   const onAddMemberToActivitySubmit = (activityId: string) => {

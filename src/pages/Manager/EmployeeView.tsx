@@ -1,16 +1,13 @@
 import { Button, Card, Divider, notification } from 'antd';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useRecoilState } from 'recoil';
 import ManagerUserFormView from '../../components/UserForm';
 import { API_EMPLOYEES_URL } from '../../routes.constants';
-import userState from '../../user/userState';
 
 function ManagerEmployeeView() {
   const [employeeList, setEmployeeList] = useState([]);
   const [showEditForm, setShowEditForm] = useState(false);
   const [userForEditing, setUserForEditing] = useState({});
-  const [user] = useRecoilState(userState);
   const [api, contextHolder] = notification.useNotification();
 
   const fetchEmployeeList = () => {

@@ -1,15 +1,10 @@
-import { Button, Col, Form, notification, Row, Select } from 'antd';
+import { Button, Col, Form, Row, Select } from 'antd';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useRecoilState } from 'recoil';
 import { API_DEPARTMENTS_URL, API_USERS_URL } from '../routes.constants';
-import userState from '../user/userState';
-
-//import './UserView.scss';
 
 function ManagerUserFormView(props: any) {
   const [departmentList, setDepartmentList] = useState([]);
-  const [user] = useRecoilState(userState);
   const [editForm, setEditForm] = useState({
     _id: (props.user && props.user._id) ? props.user._id : '',
     firstName: (props.user && props.user.firstName) ? props.user.firstName : '',

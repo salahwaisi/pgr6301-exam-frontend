@@ -20,6 +20,7 @@ const EmployeeIndexView = () => {
 
   useEffect(() => {
     fetchUserActivityList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps 
   }, []);
 
   const onHoursSpentSubmit = (activityId: string) => {

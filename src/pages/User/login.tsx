@@ -8,7 +8,7 @@ import userState from '../../user/userState';
 import './login.scss';
 
 const UserLoginView = () => {
-    const [user, setUser] = useRecoilState(userState);
+    const [, setUser] = useRecoilState(userState);
     const [showUserCredentialsFailed, setShowUserCredentialsFailed] = useState(false);
     const [userLoginFormData, setUserLoginFormData] = useState({
         email: '',
